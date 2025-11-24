@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .outer{
+            border: 1px solid blue;
+            width: 50px;
+            height: 25px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            padding: 0px 2px;
+
+        }
+        #move{
+            justify-content: flex-end;
+        }
+        .inner{
+            background-color: blue;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="outer" id="move">
+        <div class="inner"></div>
+    </div>
+
+
+    <script>
+        let outer  = document.querySelector(".outer");
+        console.log(outer);
+        outer.addEventListener("click",()=>{
+            outer.toggleAttribute("id");
+        })
+    </script>
+</body>
+</html>
