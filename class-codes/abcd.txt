@@ -1,0 +1,9 @@
+*52
+        function increment(){
+            let n = num.innerText;
+            num.innerText = (n<20)? Number(n)+1:0;              
+        }
+        function decrement(){
+            let n = num.innerText;
+            num.innerText = (n>0)? Number(n)-1 : "can not be negative";             
+        }

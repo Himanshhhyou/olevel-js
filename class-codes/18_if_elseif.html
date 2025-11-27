@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <input type="number" id="p" placeholder="Enter Your %">
+    <button id="btn" onclick="cal()">Calculate</button>
+    <h1 id="result"></h1>
+    <script>
+        let p = document.getElementById('p');
+        let btn = document.getElementById('btn')
+        let res = document.getElementById('result')
+
+        function cal(){
+            
+            res.style.color = "green"
+
+            if(p.value>=85 && p.value<100){
+                res.innerText = "S Grade"
+            }
+            else if(p.value>=75 && p.value<85){
+                res.innerText = "A Grade"
+            }
+            else if(p.value>=65 && p.value<75){
+                res.innerText = "B Grade"
+            }
+            else if(p.value>=55 && p.value<65){
+                res.innerText = "C Grade"
+            }
+            
+            else if(p.value>=50 && p.value<55){
+                res.innerText = "D Grade"
+            }
+            else{
+                res.innerText = "FAIL";
+                res.style.color = "red";
+            }
+                }
+
+        
+        // 85-100 ==> S
+        // 75-85 ==> A
+        // 65-75 ==> B
+        // 55-65 ==> C
+        // 50-55 ==> D
+        // 0-50 ==> F
+
+
+
+
+    </script>
+</body>
+</html>

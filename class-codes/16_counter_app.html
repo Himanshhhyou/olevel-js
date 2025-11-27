@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+            .main{
+                background-color: red;
+                width: 200px;
+                 display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            border-radius: 20px;
+
+            }
+            .btns{
+                margin-bottom: 20px;
+            }
+            .btns button{
+                background-color: white;
+                color: red;
+                padding: 5px 10px;
+                border: none;
+            }
+            button:hover{
+                border: 2px solid white;
+                background-color: transparent;
+                color: white
+
+            }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <h1 id="data">0</h1>
+
+        <div class="btns">
+
+            <button id="inc" onclick="increment()">
+                Increment
+            </button>
+            
+            <button id="dec" onclick="decrement()">
+                Decrement
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let num  = document.getElementById('data');
+        let inc  = document.getElementById('inc');
+        let dec  = document.getElementById('dec');
+
+        function increment(){
+            num.innerText = Number(num.innerText)+1;              
+        }
+        function decrement(){
+            num.innerText = Number(num.innerText)-1;              
+        }
+
+
+    </script>
+</body>
+</html>
