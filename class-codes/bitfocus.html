@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .container {
+                 position: relative;
+  border-radius: 20px;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            width: 420px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(red, blue);
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+        
+        h1 {
+            font-size: 60px;
+            
+            position: relative;
+        }
+        
+        h2 {
+            font-size: 40px;
+        }
+        
+        p {
+            margin-top: 28px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .strip {
+                    width: 180px;
+    height: 661px;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.3) 40% 60%, black);
+    filter: blur(15px);
+    position: absolute;
+    /* opacity: 0.7; */
+    top: -181px;
+    right: 151px;
+    transform: rotate(54deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Buttons</h1>
+        <h2>Black Week 50% Discount</h2>
+        <p>Lifetime 50% discount on yearly Lite and Individual subscriptions.
+            Offer ends December 1st at 00:00 CET</p>
+        <div class="strip"></div>
+    </div>
+</body>
+
+</html>
