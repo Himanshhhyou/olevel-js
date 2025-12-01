@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cursor follower</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+        }
+        #circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: yellow;
+            position: relative;
+        }
+        .line{
+            height: 100vh;
+            width: 2px;
+            background-color: black;
+            position: relative;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div class="line"></div>
+
+    <script>
+        let body = document.body;
+        let circle = document.getElementById('circle');
+
+        body.addEventListener('mousemove',(e)=>{
+           circle.style.top = e.pageY+'px'
+           circle.style.left = e.pageX+'px'
+           if(e.pageX>200){
+            circle.style.background='red';
+            circle.style.borderRadius = 0;
+            }
+            else{
+            circle.style.background='yellow';
+            circle.style.borderRadius = '50%';
+
+           }
+        })
+
+        //()=>{}  arrow function
+        //function myFun(){}
+
+       
+    </script>
+</body>
+</html>
