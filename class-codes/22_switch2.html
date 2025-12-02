@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course fee program</title>
+</head>
+
+<body>
+    <select onchange="feeCalc()" id="course">
+        <option value="">Select course</option>
+        <option value="B.Sc">B.Sc</option>
+        <option value="M.Sc">M.Sc</option>
+        <option value="BBA">BBA</option>
+        <option value="MBA">MBA</option>
+    </select>
+    <p id="output">Fee will display here</p>
+
+
+    <script>
+        let course = document.getElementById('course');
+        let output = document.getElementById('output');
+        let fee = 0;
+        function feeCalc() {
+            switch (course.value) {
+                case 'B.Sc':
+                    output.innerText = 7000;
+                    break;
+                case 'M.Sc':
+                    output.innerText = 15000;
+                    break;
+                case 'BBA':
+                    output.innerText = 60000;
+                    break;
+                case 'MBA':
+                    output.innerText = 135000;
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
