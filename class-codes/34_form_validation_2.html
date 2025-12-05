@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation 2</title>
+</head>
+<body>
+    <form action="" name="myform" onsubmit="check(event)">
+        <input type="password" name="pass">
+        <input type="submit">
+        <p id="errmsg"></p>
+    </form>
+    <script>
+
+            function check(e){
+                e.preventDefault();
+                let p = document.querySelector("input[type='password']").value;
+                let errmsg = document.querySelector("#errmsg");
+      
+                if(p.length<8){
+                        errmsg.innerText = "Password cannt be less than 8 char"
+                }
+                else{
+                    errmsg.innerText = 'Welcome ji Welcome'
+                }
+            }
+    </script>
+</body>
+</html>

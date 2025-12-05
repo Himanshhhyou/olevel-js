@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+         form{
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+          margin: auto;
+          margin-top: 100px;
+          gap: 10px;
+         }
+            input{
+            padding: 10px;
+            font-size: 16px;
+            }
+
+
+    </style>
+</head>
+<body>
+    <form onsubmit="check(event)" name="loginForm">
+        <input 
+            type="text" 
+            name="uname" 
+            placeholder="Enter username"
+        >
+        <input 
+            type="password"
+            name="pass"
+            placeholder="Enter password"
+        >
+        <input type="submit">
+    </form>
+    <h1 id="msg"></h1>
+    <script>
+        let uname = "Ram3421"
+        let pass = "Ram@9876"
+        function check(e){
+            e.preventDefault();
+            let inputUname = document.forms['loginForm']['uname'].value;
+            let inputPass = document.forms['loginForm']['pass'].value;
+            let msg = document.querySelector("#msg"); 
+            if(inputUname==uname && inputPass==pass){
+                msg.innerText = "Login Successful"
+            }
+            else{
+                msg.innerText = "Username or password incorrect"
+            } 
+        }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onclick event</title>
+    <style>
+        button,h1{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="ck()">Click me</button>
+    <button onclick="clk()">Button 2</button>
+    <h1 onclick="abc()" id="h">Heading</h1>
+    <script>
+        function abc(){
+            document.getElementById('h').innerText = 'हेडिंग'
+        }
+        function ck(){
+            alert("Button clicked");   
+        }
+        function clk(){
+            alert("Button 2 clicked");
+        }
+    </script>
+</body>
+</html>

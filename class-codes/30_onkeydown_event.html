@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onkeydown</title>
+</head>
+<body onkeydown="kd(event)">
+    <h1 id="h"></h1>
+    <script>
+        function kd(event){
+            document.getElementById('h').innerText = event.key;
+        }
+    </script>
+</body>
+</html>

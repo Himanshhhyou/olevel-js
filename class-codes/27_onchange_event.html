@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onchange</title>
+</head>
+<body>
+    <input type="text" id="data" onchange="changeCase()">
+
+    <script>
+        function changeCase(){
+            let data = document.getElementById('data');
+            data.value = data.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
