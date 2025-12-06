@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>After</title>
+    <style>
+       button{
+        background-color: darkred;
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        width:80;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        .magicpattern { 
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M609.5 631.5Q348 763 311.5 436.5T573 305q298 195 36.5 326.5Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23444cf7%22 d=%22M609.5 631.5Q348 763 311.5 436.5T573 305q298 195 36.5 326.5Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+    }
+    button::after{
+        content: "I am aa gaya";
+        background-color: blue;
+        height: 100%;
+        position: absolute;
+        bottom: 40px;
+        right: -40px;
+        
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    button:hover::after{
+        bottom: 0;
+        right: 0;
+    }
+   
+        
+       
+    </style>
+</head>
+<body>
+        <button class="magicpattern">Hover Me</button>
+
+</body>
+</html>
