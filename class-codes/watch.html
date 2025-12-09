@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        h1{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px; 
+            color: rgb(83, 83, 83);
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;        
+        }
+    </style>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <script>
+        let h1 = document.getElementById('time');
+        setInterval(()=>{
+            let t = new Date()
+            h1.innerText = t.toLocaleTimeString();
+            //toLocaleDateString
+        },1000)
+    </script>
+</body>
+</html>
